@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,361 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  height: 15%;
+}
+
+main {
+  height: 85%;
+  background-color: rgb(217, 220, 223);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+nav {
+  height: 100%;
+}
+
+.nav-top{
+  height: 50%;
+  background-color: rgb(7, 7, 24);
+}
+
+.nav-bottom {
+  height: 50%;
+}
+
+.nav-bottom > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav--li {
+  width: 200px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 200 medium sans-serif;
+}
+
+.nav--li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav--li:hover {
+  background-color: rgb(250, 240, 255);
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+}
+
+.main--container {
+  height: 97%;
+  width: 90%;
+  position: relative;
+  z-index: 0;
+}
+
+.main--overlay {
+  position: absolute;
+  top:0;
+  z-index: 1;
+
+  background-color: white;
+  width: 240px;
+  border-radius: 3px;
+  box-shadow: 0 20px 50px rgb(201, 197, 197);
+}
+
+.main--overlay div {
+  padding: 10px;
+  cursor: pointer;
+}
+.main--overlay div:hover {
+  color: rgb(45, 107, 165);
+}
+
+.main--top {
+  height: 15%;
+  max-height: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main--info {
+  height: 20%;
+  max-height: 70px;
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  border-top: 4px rgb(138, 195, 197) solid;
+}
+
+.main--brief {
+  background-color: white;
+  border-top: 4px rgb(138, 195, 197) solid;
+}
+
+/* overlay rules START */
+
+.overlay {
+  display: none;
+  height: 200px;
+  width: 400px;
+  top: 20%;
+  left: 33.3%;
+  position: absolute;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid rgb(213, 210, 210);
+
+}
+
+.overlay--top {
+  display: flex;
+  height: 30%;
+  border-bottom: 1px rgb(176, 170, 170) solid;
+  justify-content: space-between;
+}
+.overlay--top > div{
+  width: 50px;
+  font-size: x-large;
+  text-align: center;
+  cursor: pointer;
+}
+
+.overlay--main > form, .overlay--main > .delete-widget {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.delete-widget > .delete-message {
+  border-bottom: 1px rgb(176, 170, 170) solid;
+  padding: 20px;
+}
+
+.delete-widget > .delete-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-buttons > .yes {
+  background-color: rgb(57, 186, 57);
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+.delete-buttons > .cancel {
+  background-color: rgb(234, 15, 15);
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay--main > form > .overlay-item {
+  height: 27px;
+}
+
+.overlay--main > form > button {
+  background-color: rgb(37, 201, 147);
+  color: white;
+  border: 1px solid rgb(50, 180, 100);
+}
+
+.overlay--main > form > input {
+  padding: 17px;
+  height: 30px;
+}
+
+/* overlay rules END */
+
+/* add-medicine rules START */
+.add-med--container {
+  position: absolute;
+  height: 400px;
+  width: 700px;
+  z-index: 0;
+  top: 30px;
+  border: 1px solid rgb(186, 183, 183);
+  background-color: white;
+  border-radius: 10px;
+}
+.add-med--container .top {
+  height: 15%;
+  padding: 20px;
+  border-bottom: 1px solid rgb(197, 190, 190);
+  font-size: large;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-med--container .top .back {
+  background-color: rgb(37, 201, 147);
+  text-align: center;
+  color: white;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+  padding-top: 4px;
+  border-radius: 4px;
+}
+.add-med--container form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.add-med--container form div {
+  height: 90px;
+  padding-bottom: 5px;
+  display: flex; flex-direction: column;
+  
+}
+
+.add-med--container form div input {
+  height: 40px;
+  padding-left: 10px;
+}
+.add-med--container form .description-input textarea {
+  padding: 10px;
+}
+
+.add-med--container form button {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(37, 201, 147);
+  border-radius: 4px;
+  border: 1px solid rgb(145, 143, 143);
+  color: white;
+}
+
+/* add-medicine rules END */
+
+.main--welcome-message {
+  font-weight: 600;
+}
+
+.main--info-item {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+
+.main--brief-title {
+  height: 20%;
+  min-height: 60px;
+  margin: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 95%;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 3px solid rgb(211, 214, 217);
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-btn {
+  background-color: rgb(37, 201, 147);
+  border: 2px solid rgb(39, 213, 155);
+  padding: 8px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main--brief-stats {
+  margin-left: 40px;
+  margin-top: 2%;
+  width: 95%;
+  list-style-type: none;
+}
+
+.main--brief-head > ul, .main--brief-content > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.main--brief-content {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.main--brief-content > ul {
+  border: 2px solid rgb(249, 245, 245);
+}
+
+.main--brief-content ul li {
+  text-align: center;
+  border: 1px solid rgb(208, 208, 211);
+}
+.brief-item, .brief-content {
+  list-style-type: none;
+  width: 25%;
+  font-size: 17px;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.brief-item {
+  text-transform: uppercase;
+  border-top: 2px solid rgb(208, 208, 211);
+  border-bottom: 2px solid rgb(208, 208, 211);
+  background-color: rgb(239, 239, 245);
+  font-weight: 600;
+}
+
+.main--brief-content > ul > .action {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit, .delete {
+  background-color: rgb(31, 160, 145);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(244, 241, 241);
+  cursor: pointer;
+}
+.delete {
+  background-color: rgb(203, 12, 12);
 }
