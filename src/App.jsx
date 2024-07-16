@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { HashRouter as Router, Routes, Route, Link} from "react-router-dom"
 import SinglePage from './Pages/SinglePage';
 import AddOrEditMed from './Components/AddOrEditMed';
-import { useGlobalContext } from './context';
+import { useGlobalContext } from "./context/context"
 import page_data from "./pageData.json"
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
     // showExpired, setShowExpired,
     // showStock, setShowStock,
     // showAddStock, setShowAddStock,
-    dial} = useGlobalContext();
+    dial
+    } = useGlobalContext();
 
     const routing_function = (route) => {
       setPage_head(page_data[route].page);

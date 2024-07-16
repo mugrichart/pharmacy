@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom'
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../context/context';
 
 
 function Bottom({data}) {

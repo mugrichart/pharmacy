@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../context/context';
 import { useLocation } from "react-router-dom"
 import Bottom from '../Components/Bottom';
 import Top from '../Components/Top';
